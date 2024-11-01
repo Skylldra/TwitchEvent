@@ -96,13 +96,14 @@
 
     <!-- Schneefall-Effekt durch zufällige Positionierung der Schneeflocken -->
     <script>
-        // Anzahl der Schneeflocken
-        const snowflakes = 90;
+        // Anzahl der Schneeflocken erhöhen und zeitversetztes Starten festlegen
+        const snowflakes = 100; // Erhöhte Anzahl der Schneeflocken
         for (let i = 0; i < snowflakes; i++) {
             const snowflake = document.createElement('div');
             snowflake.className = 'snowflake';
             snowflake.style.left = Math.random() * 100 + 'vw';
-            snowflake.style.animationDuration = Math.random() * 4 + 8 + 's'; // langsamere Geschwindigkeit zwischen 8 und 12 Sekunden
+            snowflake.style.animationDuration = Math.random() * 4 + 8 + 's'; // Langsame Geschwindigkeit zwischen 8 und 12 Sekunden
+            snowflake.style.animationDelay = Math.random() * 8 + 's'; // Zufälliger Startzeitpunkt für kontinuierlichen Schneefall
             snowflake.style.opacity = Math.random();
             snowflake.innerHTML = '❄';
             document.body.appendChild(snowflake);
