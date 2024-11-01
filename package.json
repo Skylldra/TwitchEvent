@@ -1,0 +1,12 @@
+{
+    "name": "minecraft-event",
+    "version": "1.0.0",
+    "description": "Minecraft Christmas Event Server Info",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "^4.17.1"
+    }
+}
